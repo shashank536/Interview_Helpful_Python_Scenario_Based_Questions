@@ -1,0 +1,25 @@
+name: Auto Create Pull Request
+
+on:
+  push:
+    branches:
+      - "feature/**"
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Create Pull Request
+        uses: devops-infra/action-pull-request@v0.5.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          source_branch: ${{ github.ref_name }}
+          target_branch: main
+          title: "${{ github.ref_name }}"
+          body: |
+            This pull request was created automatically by GitHub Actions.
