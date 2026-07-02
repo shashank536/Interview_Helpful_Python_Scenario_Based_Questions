@@ -15,6 +15,8 @@ ABd1234@1,a F1#,2w3E*,2We3345
 Then, the output of the program should be:
 ABd1234@1
 """
+
+
 def passwordVerifierTool(user_password):
     upper = lower = digit = spcl_char = False
     if 6 <= len(user_password) <= 12:
@@ -29,6 +31,7 @@ def passwordVerifierTool(user_password):
                 spcl_char = True
         return upper and lower and digit and spcl_char
     return False
+
 
 user_input = input("Enter a List Of Password: ").split(",")
 valid_pwd = []

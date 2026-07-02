@@ -8,5 +8,5 @@ john
 """
 
 email = "shashankkumar@google.com"
-username = email[:email.index("@")]
+username = email[: email.index("@")]
 print(username)

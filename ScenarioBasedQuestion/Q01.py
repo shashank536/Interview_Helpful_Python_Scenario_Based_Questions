@@ -10,12 +10,13 @@ Let us assume the following comma separated input sequence is given to the progr
 The output of the program should be:
 18,22,24
 """
+
 import math
 
 
 def question1(num):
-    C = 50.
-    H = 30.
+    C = 50.0
+    H = 30.0
     result = []
     for i in num:
         q = math.sqrt((2 * C * i) / H)

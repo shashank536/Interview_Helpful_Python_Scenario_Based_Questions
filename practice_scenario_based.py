@@ -145,7 +145,7 @@
 #     a,b = b, a+b
 
 # 6.	Write a Python Program to Find the Sum of Natural Numbers?
-#numbers in list
+# numbers in list
 # def sumofno(num:list):
 #     sum = 0
 #     for i in num:
@@ -155,32 +155,37 @@
 
 
 # 5.	Write a Python Program to Make a Simple Calculator with 4 basic mathematical operations?
-#2 inputs from user
-#assign to variable
-#user should not enter any letters
-#throw exception and ask to re-enter no only
+# 2 inputs from user
+# assign to variable
+# user should not enter any letters
+# throw exception and ask to re-enter no only
+
 
 def calculator():
     while True:
-        user_select = int(input("Pls select below operation : \n1.Addition, \n2.Subtraction, \n3.Multiplication, \n4.division:\nselect: "))
+        user_select = int(
+            input(
+                "Pls select below operation : \n1.Addition, \n2.Subtraction, \n3.Multiplication, \n4.division:\nselect: "
+            )
+        )
         try:
-            if 1<= user_select <=4:
+            if 1 <= user_select <= 4:
                 num1 = int(input("Enter First Number: "))
                 num2 = int(input("Enter Second Number: "))
                 if user_select == 1:
-                    total = num1+num2
+                    total = num1 + num2
                     print(f"Addition of 2 Numbers {num1} + {num2} is = {total}")
                 elif user_select == 2:
-                    total = num1-num2
+                    total = num1 - num2
                     print(f"Subtraction of 2 Numbers {num1} - {num2} is = {total}")
                 elif user_select == 3:
-                    total = num1*num2
+                    total = num1 * num2
                     print(f"Multiplication of 2 Numbers {num1} * {num2} is = {total}")
                 elif user_select == 4:
                     if num2 == 0:
                         print("cannot divide by 0")
                     else:
-                        total = num1/num2
+                        total = num1 / num2
                         print(f"division of 2 Numbers {num1} / {num2} is = {total}")
                 break
             else:
@@ -188,21 +193,5 @@ def calculator():
         except ValueError:
             print("Pls select only numbers")
 
+
 calculator()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
