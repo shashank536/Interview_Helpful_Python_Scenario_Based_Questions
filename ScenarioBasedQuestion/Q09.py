@@ -7,13 +7,16 @@ class Person:
     def __init__(self):
         pass
 
+
 class Male(Person):
     def getGender(self):
         print(f"Gender is Male")
 
+
 class Female(Person):
     def getGender(self):
         print(f"Gender is Female")
+
 
 male = Male()
 female = Female()

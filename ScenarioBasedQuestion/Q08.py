@@ -11,7 +11,7 @@ class Generator:
             if i % 7 == 0:
                 yield i
 
+
 obj = Generator(n=100)
 for i in obj.divisiblebySeven():
     print(i)
-

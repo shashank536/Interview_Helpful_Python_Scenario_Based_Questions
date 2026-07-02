@@ -6,6 +6,7 @@ def stringOperation():
     new_str = string.split()
     print(" ".join(new_str))
 
+
 stringOperation()
 # 4.Write a Python to check if a given string is binary string or not?
 # 5.Write a Python program to find uncommon words from two Strings?

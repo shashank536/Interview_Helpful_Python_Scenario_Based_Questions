@@ -6,10 +6,14 @@ If the following n is given as input to the program:
 Then, the output of the program should be:
 0,2,4,6,8,10
 """
+
+
 def evenNumbersOnly(n):
     for i in range(n + 1):
         if i % 2 == 0:
             yield i
+
+
 result = []
 for num in evenNumbersOnly(10):
     result.append(str(num))

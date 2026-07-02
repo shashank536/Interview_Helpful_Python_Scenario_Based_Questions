@@ -27,7 +27,5 @@ def findFrequency(user_input):
         print(f"{key}:{count[key]}")
 
 
-
-
 user_input = input("Enter a sentence: ").split()
 findFrequency(user_input)

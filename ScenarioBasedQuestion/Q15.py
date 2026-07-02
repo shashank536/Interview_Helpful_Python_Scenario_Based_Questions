@@ -7,10 +7,13 @@ If the following n is given as input to the program:
 Then, the output of the program should be:
 0,35,70
 """
+
+
 def isdivisible(n):
-    for i in range(n+1):
-        if i%5==0 and i%7==0:
+    for i in range(n + 1):
+        if i % 5 == 0 and i % 7 == 0:
             yield i
+
 
 result = []
 for num in isdivisible(100):

@@ -16,6 +16,7 @@ def question4(input_value):
     sorted_names = sorted(new_list)
     return " ".join(sorted_names)
 
+
 input_value = input("Enter a words with white space:").split()
 result = question4(input_value)
 print(result)

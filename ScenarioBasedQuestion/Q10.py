@@ -3,12 +3,14 @@ verb is in ["Play", "Love"] and the object is in ["Hockey","Football"]."""
 
 subject = ["I", "You"]
 verb = ["Play", "Love"]
-object = ["Hockey","Football"]
+object = ["Hockey", "Football"]
+
 
 def generatePossibleSentence():
     for i in subject:
         for j in verb:
             for k in object:
-                print(i,j,k)
+                print(i, j, k)
+
 
 generatePossibleSentence()
