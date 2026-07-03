@@ -11,9 +11,9 @@ find_even_nums(2) ➞ [2]
 
 def find_even_nums(num):
     even = [i for i in range(1, num + 1) if i % 2 == 0]
-    print(even)
+    return even
 
 
-find_even_nums(8)
-find_even_nums(4)
-find_even_nums(2)
+print(find_even_nums(8))
+print(find_even_nums(4))
+print(find_even_nums(2))

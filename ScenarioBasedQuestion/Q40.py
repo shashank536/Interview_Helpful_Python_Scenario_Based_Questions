@@ -13,12 +13,14 @@ add_indexes([5, 4, 3, 2, 1]) ➞ [5, 5, 5, 5, 5]
 
 
 def add_indexes(arr):
+    result = []
     for i in range(len(arr)):
-        print(f"{arr[i] + i}")
+        result.append(arr[i] + i)
+    return result
 
 
-add_indexes([0, 0, 0, 0, 0])
+print(add_indexes([0, 0, 0, 0, 0]))
 print("---------------------------------------")
-add_indexes([1, 2, 3, 4, 5])
+print(add_indexes([1, 2, 3, 4, 5]))
 print("---------------------------------------")
-add_indexes([5, 4, 3, 2, 1])
+print(add_indexes([5, 4, 3, 2, 1]))

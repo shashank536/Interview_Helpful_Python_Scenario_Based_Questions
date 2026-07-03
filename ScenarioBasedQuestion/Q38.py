@@ -15,9 +15,9 @@ def filter_list(arr):
     for i in arr:
         if type(i) == int:
             newlist.append(i)
-    print(newlist)
+    return newlist
 
 
-filter_list([1, 2, 3, "a", "b", 4])
-filter_list(["A", 0, "Edabit", 1729, "Python", "1729"])
-filter_list(["Nothing", "here"])
+print(filter_list([1, 2, 3, "a", "b", 4]))
+print(filter_list(["A", 0, "Edabit", 1729, "Python", "1729"]))
+print(filter_list(["Nothing", "here"]))

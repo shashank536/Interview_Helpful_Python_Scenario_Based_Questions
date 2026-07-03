@@ -19,11 +19,11 @@ def index_of_caps(text):
     for i in range(len(text)):
         if text[i].isupper():
             index.append(i)
-    print(index)
+    return index
 
 
-index_of_caps("eDaBiT")
-index_of_caps("eQuINoX")
-index_of_caps("determine")  # []
-index_of_caps("STRIKE")  # [0, 1, 2, 3, 4, 5]
-index_of_caps("sUn")  # [1]
+print(index_of_caps("eDaBiT"))
+print(index_of_caps("eQuINoX"))
+print(index_of_caps("determine"))  # []
+print(index_of_caps("STRIKE"))  # [0, 1, 2, 3, 4, 5]
+print(index_of_caps("sUn"))  # [1]
