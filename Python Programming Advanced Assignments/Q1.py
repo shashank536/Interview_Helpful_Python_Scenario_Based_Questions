@@ -1,0 +1,43 @@
+"""
+Write a function that takes a list of lists and returns the value of all of the symbols in it,
+where each symbol adds or takes something from the total score. Symbol values:
+
+# = 5
+O = 3
+X = 1
+! = -1
+!! = -3
+!!! = -5
+
+A list of lists containing 2 #s, a O, and a !!! would equal (0 + 5 + 5 + 3 - 5) 8.
+
+If the final score is negative, return 0 (e.g. 3 #s, 3 !!s, 2 !!!s and a X would be (0 + 5 + 5 + 5 - 3 - 3 - 3 - 5 - 5 + 1) -3, so return 0.
+
+Examples
+
+check_score([
+  ["#", "!"],
+  ["!!", "X"]
+]) ➞ 2
+
+check_score([
+  ["!!!", "O", "!"],
+  ["X", "#", "!!!"],
+  ["!!", "X", "O"]
+]) ➞ 0
+"""
+
+
+def check_score(arr):
+    total = 0
+    scores = {"#": 5, "O": 3, "X": 1, "!": -1, "!!": -3, "!!!": -5}
+    for i in arr:
+        for j in i:
+            total += scores[j]
+    if total < 0:
+        return 0
+    return total
+
+
+print(check_score([["#", "!"], ["!!", "X"]]))  # 2
+print(check_score([["!!!", "O", "!"], ["X", "#", "!!!"], ["!!", "X", "O"]]))  # 0
