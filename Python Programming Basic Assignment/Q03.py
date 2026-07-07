@@ -10,10 +10,13 @@ bag,hello,without,world
 """
 
 
-def question3(input_value):
-    sorted_names = sorted(input_value)
-    print(*sorted_names, sep=",")
+def sorting(text):
+    words = text.split(",")
+    for i in range(len(words)):
+        for j in range(len(words) - 1):
+            if words[j] > words[j + 1]:
+                words[j], words[j + 1] = words[j + 1], words[j]
+    return ",".join(words)
 
 
-input_value = input("Enter a Multiple String With Comma Seperated: ").split(",")
-question3(input_value)
+print(sorting("without,hello,bag,world"))

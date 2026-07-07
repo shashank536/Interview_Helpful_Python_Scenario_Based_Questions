@@ -16,16 +16,22 @@ or:2
 to:1"""
 
 
-def findFrequency(user_input):
+def frequency(text):
+    words = text.split()
+    for i in range(len(words)):
+        for j in range(len(words) - 1):
+            if (words[j]) > (words[j + 1]):
+                words[j], words[j + 1] = words[j + 1], words[j]
     count = {}
-    for i in user_input:
+    for i in words:
         if i in count:
             count[i] += 1
         else:
             count[i] = 1
-    for key in sorted(count):
-        print(f"{key}:{count[key]}")
+    for i in count:
+        print(f"{i}:{count[i]}")
 
 
-user_input = input("Enter a sentence: ").split()
-findFrequency(user_input)
+frequency(
+    "New to Python or choosing between Python 2 and Python 3? Read Python 2 or Python 3."
+)

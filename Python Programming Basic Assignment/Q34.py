@@ -20,3 +20,4 @@ def reverse(boolean):
 
 
 print(reverse(True))
+print(reverse(0))
