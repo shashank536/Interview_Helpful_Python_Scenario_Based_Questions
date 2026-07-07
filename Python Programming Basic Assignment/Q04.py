@@ -8,15 +8,24 @@ again and hello makes perfect practice world
 """
 
 
-def question4(input_value):
-    new_list = []
-    for i in input_value:
-        if i not in new_list:
-            new_list.append(i)
-    sorted_names = sorted(new_list)
-    return " ".join(sorted_names)
+def remove_duplicate_and_sort(text):
+    words = text.split()
+    original_words = []
+    for i in words:
+        if i not in original_words:
+            original_words.append(i)
+    for i in range(len(original_words)):
+        for j in range(len(original_words) - 1):
+            if original_words[j] > original_words[j + 1]:
+                original_words[j], original_words[j + 1] = (
+                    original_words[j + 1],
+                    original_words[j],
+                )
+    return " ".join(original_words)
 
 
-input_value = input("Enter a words with white space:").split()
-result = question4(input_value)
-print(result)
+print(
+    remove_duplicate_and_sort(
+        "hello world and practice makes perfect and hello world again"
+    )
+)

@@ -35,8 +35,8 @@ def passwordVerifierTool(user_password):
 
 user_input = input("Enter a List Of Password: ").split(",")
 valid_pwd = []
-for password in user_input:
-    password = password.strip()
-    if passwordVerifierTool(password):
-        valid_pwd.append(password)
+for i in user_input:
+    password = i.strip()
+    if passwordVerifierTool(i):
+        valid_pwd.append(i)
 print(",".join(valid_pwd))
